@@ -1,0 +1,50 @@
+{
+  "id": "iconic-item-mancer",
+  "title": "Marvel Multiverse — Iconic Item Mancer",
+  "description": "Assistente passo a passo para criação de Iconic Items do sistema Marvel Multiverse RPG.",
+  "authors": [
+    {
+      "name": "Manus AI Assistant"
+    }
+  ],
+  "version": "1.0.8",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": [
+    "scripts/iconic-item-mancer.js"
+  ],
+  "styles": [
+    "styles/styles.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "license": "MIT",
+  "flags": {
+    "core": {
+      "priority": 100
+    },
+    "iconic-item-mancer": {
+      "schema": 1
+    }
+  },
+  "name": "iconic-item-mancer",
+  "type": "module",
+  "url": "https://github.com/rodrigosinistro/iconic-item-mancer",
+  "manifest": "https://raw.githubusercontent.com/rodrigosinistro/iconic-item-mancer/main/module.json",
+  "download": "https://github.com/rodrigosinistro/iconic-item-mancer/releases/download/v1.0.8/iconic-item-mancer-v1.0.8.zip",
+  "changelog": "https://github.com/rodrigosinistro/iconic-item-mancer/releases",
+  "bugs": "https://github.com/rodrigosinistro/iconic-item-mancer/issues",
+  "readme": "https://github.com/rodrigosinistro/iconic-item-mancer#readme"
+}
