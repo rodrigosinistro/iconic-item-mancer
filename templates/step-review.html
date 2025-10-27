@@ -1,0 +1,123 @@
+<div class="step-review">
+  <h2>{{localize "ICONICITEMMANCER.Steps.Review"}}</h2>
+  <p class="step-description">{{localize "ICONICITEMMANCER.Descriptions.Review"}}</p>
+  
+  <div class="review-section">
+    <h3><i class="fas fa-info-circle"></i> {{localize "ICONICITEMMANCER.Labels.BasicInformation"}}</h3>
+    <div class="review-content">
+      <div class="review-item">
+        <strong>{{localize "ICONICITEMMANCER.Labels.ItemName"}}:</strong>
+        <span>{{state.name}}</span>
+      </div>
+      {{#if state.description}}
+        <div class="review-item">
+          <strong>{{localize "ICONICITEMMANCER.Labels.Description"}}:</strong>
+          <p>{{state.description}}</p>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+  
+  <div class="review-section">
+    <h3><i class="fas fa-certificate"></i> {{localize "ICONICITEMMANCER.Labels.Origin"}}</h3>
+    <div class="review-content">
+      {{#each origins}}
+        {{#if (eq this.id ../state.origin)}}
+          <div class="review-origin">
+            <strong>{{this.name}}</strong>
+            <p>{{#if (eq @root.lang "pt-BR")}}{{this.descriptionPtBR}}{{else}}{{this.description}}{{/if}}</p>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  
+  {{#if state.restrictions.length}}
+    <div class="review-section">
+      <h3><i class="fas fa-ban"></i> {{localize "ICONICITEMMANCER.Labels.Restrictions"}} ({{state.restrictions.length}})</h3>
+      <div class="review-content">
+        <ul class="review-list">
+          {{#each state.restrictions}}
+            {{#each @root.restrictions}}
+              {{#if (eq this.id @../this)}}
+                <li>
+                  <strong>{{this.name}}</strong>
+                  <span class="category-badge category-{{this.category}}">{{this.category}}</span>
+                </li>
+              {{/if}}
+            {{/each}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  {{/if}}
+  
+  {{#if state.specialPowers.length}}
+    <div class="review-section">
+      <h3><i class="fas fa-star"></i> {{localize "ICONICITEMMANCER.Labels.SpecialPowers"}} ({{state.specialPowers.length}})</h3>
+      <div class="review-content">
+        <ul class="review-list">
+          {{#each state.specialPowers}}
+            {{#each @root.specialPowers}}
+              {{#if (eq this.id @../this)}}
+                <li><strong>{{this.name}}</strong></li>
+              {{/if}}
+            {{/each}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  {{/if}}
+  
+  {{#if state.weaponDetails.isWeapon}}
+    <div class="review-section">
+      <h3><i class="fas fa-sword"></i> {{localize "ICONICITEMMANCER.Labels.WeaponDetails"}}</h3>
+      <div class="review-content">
+        <div class="review-item">
+          <strong>{{localize "ICONICITEMMANCER.Labels.MeleeDamageMultiplier"}}:</strong>
+          <span>{{state.weaponDetails.meleeDamageMultiplier}}</span>
+        </div>
+        <div class="review-item">
+          <strong>{{localize "ICONICITEMMANCER.Labels.AgilityDamageMultiplier"}}:</strong>
+          <span>{{state.weaponDetails.agilityDamageMultiplier}}</span>
+        </div>
+        <div class="review-item">
+          <strong>{{localize "ICONICITEMMANCER.Labels.MeleeRange"}}:</strong>
+          <span>{{state.weaponDetails.meleeRange}}</span>
+        </div>
+        <div class="review-item">
+          <strong>{{localize "ICONICITEMMANCER.Labels.AgilityRange"}}:</strong>
+          <span>{{state.weaponDetails.agilityRange}}</span>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+  
+  <div class="review-section power-value-final">
+    <h3><i class="fas fa-calculator"></i> {{localize "ICONICITEMMANCER.Labels.PowerValue"}}</h3>
+    <div class="review-content">
+      <div class="power-value-calculation">
+        <div class="calculation-row">
+          <span>{{localize "ICONICITEMMANCER.Labels.TotalPowers"}}:</span>
+          <strong>{{state.specialPowers.length}}</strong>
+        </div>
+        <div class="calculation-row">
+          <span>{{localize "ICONICITEMMANCER.Labels.TotalRestrictions"}}:</span>
+          <strong>-{{state.restrictions.length}}</strong>
+        </div>
+        <div class="calculation-divider"></div>
+        <div class="calculation-row final">
+          <span>{{localize "ICONICITEMMANCER.Labels.FinalPowerValue"}}:</span>
+          <strong class="power-value-large">{{powerValue}}</strong>
+        </div>
+      </div>
+      <p class="power-value-note">{{localize "ICONICITEMMANCER.Info.PowerValueNote"}}</p>
+    </div>
+  </div>
+  
+  <div class="success-box">
+    <i class="fas fa-check-circle"></i>
+    <p>{{localize "ICONICITEMMANCER.Info.ReadyToCreate"}}</p>
+  </div>
+</div>
+

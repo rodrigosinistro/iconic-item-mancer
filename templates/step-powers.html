@@ -1,0 +1,71 @@
+<div class="step-powers">
+  <h2>{{localize "ICONICITEMMANCER.Steps.Powers"}}</h2>
+  <p class="step-description">{{localize "ICONICITEMMANCER.Descriptions.Powers"}}</p>
+  
+  <div class="power-value-box">
+    <span>{{localize "ICONICITEMMANCER.Labels.CurrentPowerValue"}}:</span>
+    <strong class="power-value-display">{{powerValue}}</strong>
+  </div>
+  
+  <div class="powers-section">
+    <h3><i class="fas fa-star"></i> {{localize "ICONICITEMMANCER.Labels.SpecialPowers"}}</h3>
+    <p class="section-description">{{localize "ICONICITEMMANCER.Descriptions.SpecialPowers"}}</p>
+    
+    <div class="powers-list">
+      {{#each specialPowers}}
+        <div class="power-item">
+          <label>
+            <input type="checkbox" class="special-power-checkbox" data-power-id="{{this.id}}" {{#if (includes ../state.specialPowers this.id)}}checked{{/if}} />
+            <span class="power-name">{{this.name}}</span>
+          </label>
+          <p class="power-description">{{#if (eq @root.lang "pt-BR")}}{{this.descriptionPtBR}}{{else}}{{this.description}}{{/if}}</p>
+          
+          {{#if this.requiresUnattached}}
+            <div class="power-requirement">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>{{localize "ICONICITEMMANCER.Requirements.UnattachedRequired"}}</span>
+            </div>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  
+  <div class="weapon-section">
+    <h3><i class="fas fa-sword"></i> {{localize "ICONICITEMMANCER.Labels.WeaponDetails"}}</h3>
+    <label class="weapon-toggle">
+      <input type="checkbox" class="weapon-checkbox" {{#if state.weaponDetails.isWeapon}}checked{{/if}} />
+      <span>{{localize "ICONICITEMMANCER.Labels.IsWeapon"}}</span>
+    </label>
+    
+    <div class="weapon-details-section" style="{{#unless state.weaponDetails.isWeapon}}display: none;{{/unless}}">
+      <div class="form-row">
+        <div class="form-group">
+          <label>{{localize "ICONICITEMMANCER.Labels.MeleeDamageMultiplier"}}</label>
+          <input type="text" name="weapon-meleeDamageMultiplier" value="{{state.weaponDetails.meleeDamageMultiplier}}" placeholder="+1" />
+        </div>
+        <div class="form-group">
+          <label>{{localize "ICONICITEMMANCER.Labels.AgilityDamageMultiplier"}}</label>
+          <input type="text" name="weapon-agilityDamageMultiplier" value="{{state.weaponDetails.agilityDamageMultiplier}}" placeholder="+1" />
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label>{{localize "ICONICITEMMANCER.Labels.MeleeRange"}}</label>
+          <input type="text" name="weapon-meleeRange" value="{{state.weaponDetails.meleeRange}}" placeholder="Reach" />
+        </div>
+        <div class="form-group">
+          <label>{{localize "ICONICITEMMANCER.Labels.AgilityRange"}}</label>
+          <input type="text" name="weapon-agilityRange" value="{{state.weaponDetails.agilityRange}}" placeholder="10 spaces" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="info-box">
+    <i class="fas fa-info-circle"></i>
+    <p>{{localize "ICONICITEMMANCER.Info.Powers"}}</p>
+  </div>
+</div>
+

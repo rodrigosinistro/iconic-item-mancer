@@ -1,0 +1,105 @@
+<div class="step-restrictions">
+  <h2>{{localize "ICONICITEMMANCER.Steps.Restrictions"}}</h2>
+  <p class="step-description">{{localize "ICONICITEMMANCER.Descriptions.Restrictions"}}</p>
+  
+  <div class="power-value-box">
+    <span>{{localize "ICONICITEMMANCER.Labels.CurrentPowerValue"}}:</span>
+    <strong class="power-value-display">{{powerValue}}</strong>
+  </div>
+  
+  <!-- Access Restrictions -->
+  <div class="restriction-category">
+    <h3><i class="fas fa-lock"></i> {{localize "ICONICITEMMANCER.Categories.AccessRestrictions"}}</h3>
+    <div class="restrictions-list">
+      {{#each restrictions}}
+        {{#if (eq this.category "access")}}
+          <div class="restriction-item">
+            <label>
+              <input type="checkbox" class="restriction-checkbox" data-restriction-id="{{this.id}}" {{#if (includes ../state.restrictions this.id)}}checked{{/if}} />
+              <span class="restriction-name">{{this.name}}</span>
+            </label>
+            <p class="restriction-description">{{#if (eq @root.lang "pt-BR")}}{{this.descriptionPtBR}}{{else}}{{this.description}}{{/if}}</p>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  
+  <!-- Challenging Restrictions -->
+  <div class="restriction-category">
+    <h3><i class="fas fa-exclamation-triangle"></i> {{localize "ICONICITEMMANCER.Categories.ChallengingRestrictions"}}</h3>
+    <div class="restrictions-list">
+      {{#each restrictions}}
+        {{#if (eq this.category "challenging")}}
+          <div class="restriction-item">
+            <label>
+              <input type="checkbox" class="restriction-checkbox" data-restriction-id="{{this.id}}" {{#if (includes ../state.restrictions this.id)}}checked{{/if}} />
+              <span class="restriction-name">{{this.name}}</span>
+            </label>
+            <p class="restriction-description">{{#if (eq @root.lang "pt-BR")}}{{this.descriptionPtBR}}{{else}}{{this.description}}{{/if}}</p>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  
+  <!-- Obvious Restrictions -->
+  <div class="restriction-category">
+    <h3><i class="fas fa-eye"></i> {{localize "ICONICITEMMANCER.Categories.ObviousRestrictions"}}</h3>
+    <div class="restrictions-list">
+      {{#each restrictions}}
+        {{#if (eq this.category "obvious")}}
+          <div class="restriction-item">
+            <label>
+              <input type="checkbox" class="restriction-checkbox" data-restriction-id="{{this.id}}" {{#if (includes ../state.restrictions this.id)}}checked{{/if}} />
+              <span class="restriction-name">{{this.name}}</span>
+            </label>
+            <p class="restriction-description">{{#if (eq @root.lang "pt-BR")}}{{this.descriptionPtBR}}{{else}}{{this.description}}{{/if}}</p>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  
+  <!-- Unattached Restrictions -->
+  <div class="restriction-category">
+    <h3><i class="fas fa-unlink"></i> {{localize "ICONICITEMMANCER.Categories.UnattachedRestrictions"}}</h3>
+    <div class="restrictions-list">
+      {{#each restrictions}}
+        {{#if (eq this.category "unattached")}}
+          <div class="restriction-item">
+            <label>
+              <input type="checkbox" class="restriction-checkbox" data-restriction-id="{{this.id}}" {{#if (includes ../state.restrictions this.id)}}checked{{/if}} />
+              <span class="restriction-name">{{this.name}}</span>
+            </label>
+            <p class="restriction-description">{{#if (eq @root.lang "pt-BR")}}{{this.descriptionPtBR}}{{else}}{{this.description}}{{/if}}</p>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  
+  <!-- Use Restrictions -->
+  <div class="restriction-category">
+    <h3><i class="fas fa-hand-paper"></i> {{localize "ICONICITEMMANCER.Categories.UseRestrictions"}}</h3>
+    <div class="restrictions-list">
+      {{#each restrictions}}
+        {{#if (eq this.category "use")}}
+          <div class="restriction-item">
+            <label>
+              <input type="checkbox" class="restriction-checkbox" data-restriction-id="{{this.id}}" {{#if (includes ../state.restrictions this.id)}}checked{{/if}} />
+              <span class="restriction-name">{{this.name}}</span>
+            </label>
+            <p class="restriction-description">{{#if (eq @root.lang "pt-BR")}}{{this.descriptionPtBR}}{{else}}{{this.description}}{{/if}}</p>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  
+  <div class="info-box">
+    <i class="fas fa-info-circle"></i>
+    <p>{{localize "ICONICITEMMANCER.Info.Restrictions"}}</p>
+  </div>
+</div>
+

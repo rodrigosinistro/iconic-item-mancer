@@ -1,0 +1,76 @@
+<div class="iconic-item-mancer-wizard">
+  <!-- Progress Indicator -->
+  <div class="progress-indicator">
+    <div class="progress-step {{#if (eq currentStep 1)}}active{{/if}} {{#if (gt currentStep 1)}}completed{{/if}}">
+      <div class="step-number">1</div>
+      <div class="step-label">{{localize "ICONICITEMMANCER.Steps.BasicInfo"}}</div>
+    </div>
+    <div class="progress-step {{#if (eq currentStep 2)}}active{{/if}} {{#if (gt currentStep 2)}}completed{{/if}}">
+      <div class="step-number">2</div>
+      <div class="step-label">{{localize "ICONICITEMMANCER.Steps.Origin"}}</div>
+    </div>
+    <div class="progress-step {{#if (eq currentStep 3)}}active{{/if}} {{#if (gt currentStep 3)}}completed{{/if}}">
+      <div class="step-number">3</div>
+      <div class="step-label">{{localize "ICONICITEMMANCER.Steps.Restrictions"}}</div>
+    </div>
+    <div class="progress-step {{#if (eq currentStep 4)}}active{{/if}} {{#if (gt currentStep 4)}}completed{{/if}}">
+      <div class="step-number">4</div>
+      <div class="step-label">{{localize "ICONICITEMMANCER.Steps.Powers"}}</div>
+    </div>
+    <div class="progress-step {{#if (eq currentStep 5)}}active{{/if}}">
+      <div class="step-number">5</div>
+      <div class="step-label">{{localize "ICONICITEMMANCER.Steps.Review"}}</div>
+    </div>
+  </div>
+
+  <!-- Step Content -->
+  <div class="step-content">
+    {{#if (eq currentStep 1)}}
+      {{> "modules/iconic-item-mancer/templates/step-basic-info.html"}}
+    {{/if}}
+    
+    {{#if (eq currentStep 2)}}
+      {{> "modules/iconic-item-mancer/templates/step-origin.html"}}
+    {{/if}}
+    
+    {{#if (eq currentStep 3)}}
+      {{> "modules/iconic-item-mancer/templates/step-restrictions.html"}}
+    {{/if}}
+    
+    {{#if (eq currentStep 4)}}
+      {{> "modules/iconic-item-mancer/templates/step-powers.html"}}
+    {{/if}}
+    
+    {{#if (eq currentStep 5)}}
+      {{> "modules/iconic-item-mancer/templates/step-review.html"}}
+    {{/if}}
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="wizard-navigation">
+    <button class="btn-cancel" type="button">
+      <i class="fas fa-times"></i> {{localize "ICONICITEMMANCER.Buttons.Cancel"}}
+    </button>
+    
+    <div class="nav-right">
+      {{#if (gt currentStep 1)}}
+        <button class="btn-prev" type="button">
+          <i class="fas fa-arrow-left"></i> {{localize "ICONICITEMMANCER.Buttons.Previous"}}
+        </button>
+      {{/if}}
+      
+      {{#if (lt currentStep 5)}}
+        <button class="btn-next" type="button">
+          {{localize "ICONICITEMMANCER.Buttons.Next"}} <i class="fas fa-arrow-right"></i>
+        </button>
+      {{/if}}
+      
+      {{#if (eq currentStep 5)}}
+        <button class="btn-finish" type="button">
+          <i class="fas fa-check"></i> {{localize "ICONICITEMMANCER.Buttons.Create"}}
+        </button>
+      {{/if}}
+    </div>
+  </div>
+</div>
+

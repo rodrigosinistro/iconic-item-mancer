@@ -1,0 +1,36 @@
+<div class="step-origin">
+  <h2>{{localize "ICONICITEMMANCER.Steps.Origin"}}</h2>
+  <p class="step-description">{{localize "ICONICITEMMANCER.Descriptions.Origin"}}</p>
+  
+  <div class="origins-grid">
+    {{#each origins}}
+      <div class="origin-card {{#if (eq ../state.origin this.id)}}selected{{/if}}" data-origin-id="{{this.id}}">
+        <div class="origin-icon">
+          {{#if (eq this.id "alien")}}
+            <i class="fas fa-rocket"></i>
+          {{else if (eq this.id "high-tech")}}
+            <i class="fas fa-microchip"></i>
+          {{else if (eq this.id "magic")}}
+            <i class="fas fa-hat-wizard"></i>
+          {{else if (eq this.id "mutant")}}
+            <i class="fas fa-dna"></i>
+          {{else if (eq this.id "mythic-asgardian")}}
+            <i class="fas fa-hammer"></i>
+          {{else if (eq this.id "special-training")}}
+            <i class="fas fa-user-ninja"></i>
+          {{else if (eq this.id "weird-science")}}
+            <i class="fas fa-flask"></i>
+          {{/if}}
+        </div>
+        <h3 class="origin-name">{{this.name}}</h3>
+        <p class="origin-description">{{#if (eq @root.lang "pt-BR")}}{{this.descriptionPtBR}}{{else}}{{this.description}}{{/if}}</p>
+      </div>
+    {{/each}}
+  </div>
+  
+  <div class="info-box">
+    <i class="fas fa-info-circle"></i>
+    <p>{{localize "ICONICITEMMANCER.Info.Origin"}}</p>
+  </div>
+</div>
+
