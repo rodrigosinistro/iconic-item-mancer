@@ -1,0 +1,303 @@
+[
+  {
+    "id": "access-min-ability",
+    "category": "access",
+    "name": "Minimum Ability Score Required",
+    "namePtBR": "Pontuação Mínima de Habilidade Necessária",
+    "description": "Requires a minimum score in a specific ability (2 or more).",
+    "descriptionPtBR": "Requer uma pontuação mínima em uma habilidade específica (2 ou mais).",
+    "hasValue": true,
+    "valueType": "number"
+  },
+  {
+    "id": "access-min-damage",
+    "category": "access",
+    "name": "Minimum Damage Multiplier Required",
+    "namePtBR": "Multiplicador de Dano Mínimo Necessário",
+    "description": "Requires a minimum damage multiplier (2 or more).",
+    "descriptionPtBR": "Requer um multiplicador de dano mínimo (2 ou mais).",
+    "hasValue": true,
+    "valueType": "number"
+  },
+  {
+    "id": "access-min-defense",
+    "category": "access",
+    "name": "Minimum Defense Score Required",
+    "namePtBR": "Pontuação Mínima de Defesa Necessária",
+    "description": "Requires a minimum defense score (2 or more).",
+    "descriptionPtBR": "Requer uma pontuação mínima de defesa (2 ou mais).",
+    "hasValue": true,
+    "valueType": "number"
+  },
+  {
+    "id": "access-min-check",
+    "category": "access",
+    "name": "Minimum Non-Combat Check Bonus Required",
+    "namePtBR": "Bônus Mínimo de Teste Não-Combate Necessário",
+    "description": "Requires a minimum non-combat check bonus (2 or more).",
+    "descriptionPtBR": "Requer um bônus mínimo de teste não-combate (2 ou mais).",
+    "hasValue": true,
+    "valueType": "number"
+  },
+  {
+    "id": "access-min-rank",
+    "category": "access",
+    "name": "Minimum Rank Required",
+    "namePtBR": "Rank Mínimo Necessário",
+    "description": "Requires a minimum character rank (2 or more).",
+    "descriptionPtBR": "Requer um rank mínimo de personagem (2 ou mais).",
+    "hasValue": true,
+    "valueType": "number"
+  },
+  {
+    "id": "access-movement",
+    "category": "access",
+    "name": "Movement Mode Required",
+    "namePtBR": "Modo de Movimento Necessário",
+    "description": "Requires a specific movement mode (other than run/climb/swim).",
+    "descriptionPtBR": "Requer um modo de movimento específico (além de correr/escalar/nadar).",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-origin",
+    "category": "access",
+    "name": "Origin Required",
+    "namePtBR": "Origem Necessária",
+    "description": "Requires a specific origin.",
+    "descriptionPtBR": "Requer uma origem específica.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-power",
+    "category": "access",
+    "name": "Power Required",
+    "namePtBR": "Poder Necessário",
+    "description": "Requires a specific power.",
+    "descriptionPtBR": "Requer um poder específico.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-size",
+    "category": "access",
+    "name": "Size Required",
+    "namePtBR": "Tamanho Necessário",
+    "description": "Requires a specific size category.",
+    "descriptionPtBR": "Requer uma categoria de tamanho específica.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-species",
+    "category": "access",
+    "name": "Species Required",
+    "namePtBR": "Espécie Necessária",
+    "description": "Requires a specific species.",
+    "descriptionPtBR": "Requer uma espécie específica.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-tag",
+    "category": "access",
+    "name": "Tag Required",
+    "namePtBR": "Tag Necessária",
+    "description": "Requires a specific tag.",
+    "descriptionPtBR": "Requer uma tag específica.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-team",
+    "category": "access",
+    "name": "Team Membership Required",
+    "namePtBR": "Membro de Equipe Necessário",
+    "description": "Requires membership in a specific team.",
+    "descriptionPtBR": "Requer ser membro de uma equipe específica.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-trait",
+    "category": "access",
+    "name": "Trait Required",
+    "namePtBR": "Trait Necessário",
+    "description": "Requires a specific trait.",
+    "descriptionPtBR": "Requer um trait específico.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "challenging-anathema",
+    "category": "challenging",
+    "name": "Anathema",
+    "namePtBR": "Anátema",
+    "description": "Grants a troublesome trait to the user.",
+    "descriptionPtBR": "Concede um trait problemático ao usuário."
+  },
+  {
+    "id": "challenging-berserker",
+    "category": "challenging",
+    "name": "Berserker",
+    "namePtBR": "Berserker",
+    "description": "Grants the Berserker trait.",
+    "descriptionPtBR": "Concede o trait Berserker."
+  },
+  {
+    "id": "challenging-bloodthirsty",
+    "category": "challenging",
+    "name": "Bloodthirsty",
+    "namePtBR": "Sanguinário",
+    "description": "Grants the Bloodthirsty trait.",
+    "descriptionPtBR": "Concede o trait Sanguinário."
+  },
+  {
+    "id": "challenging-breathe-different",
+    "category": "challenging",
+    "name": "Breathe Different",
+    "namePtBR": "Respirar Diferente",
+    "description": "Grants the Breathe Different trait.",
+    "descriptionPtBR": "Concede o trait Respirar Diferente."
+  },
+  {
+    "id": "challenging-weakness",
+    "category": "challenging",
+    "name": "Weakness",
+    "namePtBR": "Fraqueza",
+    "description": "Grants a weakness trait.",
+    "descriptionPtBR": "Concede um trait de fraqueza."
+  },
+  {
+    "id": "obvious-awkward",
+    "category": "obvious",
+    "name": "Awkward",
+    "namePtBR": "Desajeitado",
+    "description": "Gives trouble when handling items or people.",
+    "descriptionPtBR": "Dá problemas ao manusear itens ou pessoas."
+  },
+  {
+    "id": "obvious-flashy",
+    "category": "obvious",
+    "name": "Flashy",
+    "namePtBR": "Chamativo",
+    "description": "Gives trouble when sneaking or hiding.",
+    "descriptionPtBR": "Dá problemas ao se esconder ou se infiltrar."
+  },
+  {
+    "id": "obvious-large",
+    "category": "obvious",
+    "name": "Large",
+    "namePtBR": "Grande",
+    "description": "Hard to get into many places. Can give trouble in tight spaces.",
+    "descriptionPtBR": "Difícil de entrar em muitos lugares. Pode dar problemas em espaços apertados."
+  },
+  {
+    "id": "obvious-loud",
+    "category": "obvious",
+    "name": "Loud",
+    "namePtBR": "Barulhento",
+    "description": "Gives trouble when sneaking or hiding.",
+    "descriptionPtBR": "Dá problemas ao se esconder ou se infiltrar."
+  },
+  {
+    "id": "obvious-menacing",
+    "category": "obvious",
+    "name": "Menacing",
+    "namePtBR": "Ameaçador",
+    "description": "Gives trouble on Ego checks when trying to get positive reactions.",
+    "descriptionPtBR": "Dá problemas em testes de Ego ao tentar obter reações positivas."
+  },
+  {
+    "id": "unattached-carried",
+    "category": "unattached",
+    "name": "Carried (like a weapon)",
+    "namePtBR": "Carregado (como arma)",
+    "description": "The item is not permanently attached and can be taken away or lost.",
+    "descriptionPtBR": "O item não está permanentemente ligado e pode ser tirado ou perdido."
+  },
+  {
+    "id": "unattached-driven",
+    "category": "unattached",
+    "name": "Driven (like a vehicle)",
+    "namePtBR": "Dirigido (como veículo)",
+    "description": "The item is a vehicle that must be driven.",
+    "descriptionPtBR": "O item é um veículo que deve ser dirigido."
+  },
+  {
+    "id": "unattached-worn",
+    "category": "unattached",
+    "name": "Worn (like armor)",
+    "namePtBR": "Vestido (como armadura)",
+    "description": "The item must be worn and can be removed.",
+    "descriptionPtBR": "O item deve ser vestido e pode ser removido."
+  },
+  {
+    "id": "use-home-universe",
+    "category": "use",
+    "name": "Home Universe Use Only",
+    "namePtBR": "Uso Apenas no Universo de Origem",
+    "description": "Only works in the home universe.",
+    "descriptionPtBR": "Funciona apenas no universo de origem."
+  },
+  {
+    "id": "use-once-hour",
+    "category": "use",
+    "name": "Only Works Once Per Hour",
+    "namePtBR": "Funciona Apenas Uma Vez Por Hora",
+    "description": "Can only be used once per hour.",
+    "descriptionPtBR": "Pode ser usado apenas uma vez por hora."
+  },
+  {
+    "id": "use-three-day",
+    "category": "use",
+    "name": "Only Works Three Times Per Day",
+    "namePtBR": "Funciona Apenas Três Vezes Por Dia",
+    "description": "Can only be used three times per day.",
+    "descriptionPtBR": "Pode ser usado apenas três vezes por dia."
+  },
+  {
+    "id": "use-unliving",
+    "category": "use",
+    "name": "Only Works on Unliving Targets",
+    "namePtBR": "Funciona Apenas em Alvos Não-Vivos",
+    "description": "Only affects unliving targets.",
+    "descriptionPtBR": "Afeta apenas alvos não-vivos."
+  },
+  {
+    "id": "use-dimensions",
+    "category": "use",
+    "name": "Only Works In/With Certain Dimensions",
+    "namePtBR": "Funciona Apenas Em/Com Certas Dimensões",
+    "description": "Only works in or with certain dimensions.",
+    "descriptionPtBR": "Funciona apenas em ou com certas dimensões.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "use-extradimensional",
+    "category": "use",
+    "name": "Only Works Against Extradimensional Creatures",
+    "namePtBR": "Funciona Apenas Contra Criaturas Extradimensionais",
+    "description": "Only affects extradimensional creatures.",
+    "descriptionPtBR": "Afeta apenas criaturas extradimensionais."
+  },
+  {
+    "id": "use-challenging-check",
+    "category": "use",
+    "name": "Requires a Challenging Ability Check",
+    "namePtBR": "Requer um Teste de Habilidade Desafiador",
+    "description": "Requires a challenging ability check to use.",
+    "descriptionPtBR": "Requer um teste de habilidade desafiador para usar."
+  },
+  {
+    "id": "use-no-damage",
+    "category": "use",
+    "name": "Does No Actual Damage",
+    "namePtBR": "Não Causa Dano Real",
+    "description": "The item does no actual damage.",
+    "descriptionPtBR": "O item não causa dano real."
+  }
+]
+

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "alien",
+    "name": "Alien",
+    "namePtBR": "Alienígena",
+    "description": "Items from alien technology or materials.",
+    "descriptionPtBR": "Itens de tecnologia ou materiais alienígenas."
+  },
+  {
+    "id": "high-tech",
+    "name": "High-Tech",
+    "namePtBR": "Alta Tecnologia",
+    "description": "Items created with advanced Earth technology.",
+    "descriptionPtBR": "Itens criados com tecnologia terrestre avançada."
+  },
+  {
+    "id": "magic",
+    "name": "Magic",
+    "namePtBR": "Magia",
+    "description": "Items imbued with magical powers.",
+    "descriptionPtBR": "Itens imbuídos com poderes mágicos."
+  },
+  {
+    "id": "mutant",
+    "name": "Mutant",
+    "namePtBR": "Mutante",
+    "description": "Items connected to mutant powers or genetics.",
+    "descriptionPtBR": "Itens conectados a poderes ou genética mutante."
+  },
+  {
+    "id": "mythic-asgardian",
+    "name": "Mythic: Asgardian",
+    "namePtBR": "Mítico: Asgardiano",
+    "description": "Items from Asgard or other mythical realms.",
+    "descriptionPtBR": "Itens de Asgard ou outros reinos míticos."
+  },
+  {
+    "id": "special-training",
+    "name": "Special Training",
+    "namePtBR": "Treinamento Especial",
+    "description": "Items that require special training to use.",
+    "descriptionPtBR": "Itens que requerem treinamento especial para usar."
+  },
+  {
+    "id": "weird-science",
+    "name": "Weird Science",
+    "namePtBR": "Ciência Estranha",
+    "description": "Items created through unconventional scientific methods.",
+    "descriptionPtBR": "Itens criados através de métodos científicos não convencionais."
+  }
+]
+
