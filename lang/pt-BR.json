@@ -1,0 +1,91 @@
+{
+  "ICONICITEMMANCER": {
+    "Title": "Criador de Itens Icônicos",
+    "ButtonLabel": "Criar Item Icônico",
+    "ButtonTitle": "Abrir Assistente de Criação de Itens Icônicos",
+    
+    "Steps": {
+      "BasicInfo": "Informações Básicas",
+      "Origin": "Origem",
+      "Restrictions": "Restrições",
+      "Powers": "Poderes",
+      "Review": "Revisão"
+    },
+    
+    "Descriptions": {
+      "BasicInfo": "Insira as informações básicas do seu Item Icônico.",
+      "Origin": "Escolha a origem do seu Item Icônico. Isso determina a fonte de seu poder.",
+      "Restrictions": "Adicione restrições para reduzir o Valor de Poder. Cada restrição reduz o custo em 1.",
+      "Powers": "Selecione os poderes especiais que seu Item Icônico concede ao seu portador.",
+      "SpecialPowers": "Estes são poderes únicos que só podem ser escolhidos uma vez por item.",
+      "Review": "Revise seu Item Icônico antes de criá-lo."
+    },
+    
+    "Labels": {
+      "ItemName": "Nome do Item",
+      "Description": "Descrição",
+      "Origin": "Origem",
+      "Restrictions": "Restrições",
+      "SpecialPowers": "Poderes Especiais",
+      "WeaponDetails": "Detalhes da Arma",
+      "IsWeapon": "Este item é uma arma",
+      "MeleeDamageMultiplier": "Multiplicador de Dano Corpo a Corpo",
+      "AgilityDamageMultiplier": "Multiplicador de Dano de Agilidade",
+      "MeleeRange": "Alcance Corpo a Corpo",
+      "AgilityRange": "Alcance de Agilidade",
+      "PowerValue": "Valor de Poder",
+      "CurrentPowerValue": "Valor de Poder Atual",
+      "FinalPowerValue": "Valor de Poder Final",
+      "TotalPowers": "Total de Poderes",
+      "TotalRestrictions": "Total de Restrições",
+      "BasicInformation": "Informações Básicas"
+    },
+    
+    "Placeholders": {
+      "ItemName": "ex: Escudo do Capitão América",
+      "Description": "Descreva a aparência, história e significado do item..."
+    },
+    
+    "Categories": {
+      "AccessRestrictions": "Restrições de Acesso",
+      "ChallengingRestrictions": "Restrições Desafiadoras",
+      "ObviousRestrictions": "Restrições Óbvias",
+      "UnattachedRestrictions": "Restrições de Desconexão",
+      "UseRestrictions": "Restrições de Uso"
+    },
+    
+    "Requirements": {
+      "UnattachedRequired": "Requer uma restrição de Desconexão"
+    },
+    
+    "Info": {
+      "BasicInfo": "Dê ao seu Item Icônico um nome e descrição memoráveis. Isso ajudará a identificá-lo mais tarde.",
+      "Origin": "A origem afeta como o item interage com certos poderes e restrições.",
+      "Restrictions": "Restrições reduzem o Valor de Poder, tornando o item mais acessível aos personagens. Você pode selecionar múltiplas restrições de diferentes categorias.",
+      "Powers": "Poderes especiais são habilidades únicas que definem seu Item Icônico. Cada poder aumenta o Valor de Poder em 1.",
+      "PowerValueNote": "O Valor de Poder mínimo é sempre 1, independentemente das restrições.",
+      "ReadyToCreate": "Seu Item Icônico está pronto para ser criado! Clique em 'Criar Item' para adicioná-lo ao seu mundo."
+    },
+    
+    "Buttons": {
+      "Cancel": "Cancelar",
+      "Previous": "Anterior",
+      "Next": "Próximo",
+      "Create": "Criar Item"
+    },
+    
+    "Warnings": {
+      "NameRequired": "Por favor, insira um nome para seu Item Icônico.",
+      "OriginRequired": "Por favor, selecione uma origem para seu Item Icônico."
+    },
+    
+    "Messages": {
+      "ItemCreated": "Item Icônico '{name}' criado com sucesso!"
+    },
+    
+    "Errors": {
+      "CreateFailed": "Falha ao criar Item Icônico. Por favor, tente novamente."
+    }
+  }
+}
+

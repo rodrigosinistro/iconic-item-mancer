@@ -1,0 +1,91 @@
+{
+  "ICONICITEMMANCER": {
+    "Title": "Iconic Item Mancer",
+    "ButtonLabel": "Create Iconic Item",
+    "ButtonTitle": "Open Iconic Item Creation Wizard",
+    
+    "Steps": {
+      "BasicInfo": "Basic Info",
+      "Origin": "Origin",
+      "Restrictions": "Restrictions",
+      "Powers": "Powers",
+      "Review": "Review"
+    },
+    
+    "Descriptions": {
+      "BasicInfo": "Enter the basic information for your Iconic Item.",
+      "Origin": "Choose the origin of your Iconic Item. This determines the source of its power.",
+      "Restrictions": "Add restrictions to reduce the Power Value. Each restriction reduces the cost by 1.",
+      "Powers": "Select the special powers that your Iconic Item grants to its wielder.",
+      "SpecialPowers": "These are unique powers that can only be chosen once per item.",
+      "Review": "Review your Iconic Item before creating it."
+    },
+    
+    "Labels": {
+      "ItemName": "Item Name",
+      "Description": "Description",
+      "Origin": "Origin",
+      "Restrictions": "Restrictions",
+      "SpecialPowers": "Special Powers",
+      "WeaponDetails": "Weapon Details",
+      "IsWeapon": "This item is a weapon",
+      "MeleeDamageMultiplier": "Melee Damage Multiplier",
+      "AgilityDamageMultiplier": "Agility Damage Multiplier",
+      "MeleeRange": "Melee Range",
+      "AgilityRange": "Agility Range",
+      "PowerValue": "Power Value",
+      "CurrentPowerValue": "Current Power Value",
+      "FinalPowerValue": "Final Power Value",
+      "TotalPowers": "Total Powers",
+      "TotalRestrictions": "Total Restrictions",
+      "BasicInformation": "Basic Information"
+    },
+    
+    "Placeholders": {
+      "ItemName": "e.g., Captain America's Shield",
+      "Description": "Describe the item's appearance, history, and significance..."
+    },
+    
+    "Categories": {
+      "AccessRestrictions": "Access Restrictions",
+      "ChallengingRestrictions": "Challenging Restrictions",
+      "ObviousRestrictions": "Obvious Restrictions",
+      "UnattachedRestrictions": "Unattached Restrictions",
+      "UseRestrictions": "Use Restrictions"
+    },
+    
+    "Requirements": {
+      "UnattachedRequired": "Requires an Unattached restriction"
+    },
+    
+    "Info": {
+      "BasicInfo": "Give your Iconic Item a memorable name and description. This will help identify it later.",
+      "Origin": "The origin affects how the item interacts with certain powers and restrictions.",
+      "Restrictions": "Restrictions reduce the Power Value, making the item more accessible to characters. You can select multiple restrictions from different categories.",
+      "Powers": "Special powers are unique abilities that define your Iconic Item. Each power increases the Power Value by 1.",
+      "PowerValueNote": "The minimum Power Value is always 1, regardless of restrictions.",
+      "ReadyToCreate": "Your Iconic Item is ready to be created! Click 'Create Item' to add it to your world."
+    },
+    
+    "Buttons": {
+      "Cancel": "Cancel",
+      "Previous": "Previous",
+      "Next": "Next",
+      "Create": "Create Item"
+    },
+    
+    "Warnings": {
+      "NameRequired": "Please enter a name for your Iconic Item.",
+      "OriginRequired": "Please select an origin for your Iconic Item."
+    },
+    
+    "Messages": {
+      "ItemCreated": "Iconic Item '{name}' created successfully!"
+    },
+    
+    "Errors": {
+      "CreateFailed": "Failed to create Iconic Item. Please try again."
+    }
+  }
+}
+
