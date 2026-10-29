@@ -1,0 +1,187 @@
+<div class="iim-app-shell">
+  <header class="iim-topline">
+    <nav class="iim-progress" aria-label="Etapas do assistente">
+      {{#each steps}}<span class="iim-progress-step {{#if active}}active{{/if}} {{#if completed}}completed{{/if}}"><span>{{n}}. {{label}}</span></span>{{/each}}
+    </nav>
+    <div class="iim-pv-card" title="Power Value = Power Picks − Restrictions (mínimo 1)">
+      <span>POWER VALUE</span><strong data-iim-power-value>{{powerValue}}</strong>
+      <small><b data-iim-power-picks>{{powerPicks}}</b> picks − <b data-iim-restriction-count>{{restrictionCount}}</b> restrições</small>
+    </div>
+  </header>
+  <main class="iim-step-area">
+    {{#if step1}}
+      <section class="iim-step">
+        <h2>1. Informações básicas</h2>
+        <p class="iim-lead">Crie uma arma ou equipamento icônico. Os dados serão registrados em um Item real do Multiverse D616.</p>
+        <div class="iim-field"><label>Nome <b>*</b></label><input type="text" data-bind="name" value="{{data.name}}" placeholder="Ex.: Escudo do Capitão América"></div>
+        <div class="iim-field"><label>Tipo de item <b>*</b></label>
+          <div class="iim-item-type-select">
+            <label class="iim-type-choice {{#if showWeapon}}selected{{/if}}"><input data-bind="itemType" type="radio" name="iim-type" value="weapon" {{#if showWeapon}}checked{{/if}} {{#if editMode}}disabled{{/if}}><i class="fas fa-sword"></i><strong>Arma</strong><small>Tipo Weapon — ataques e poderes associados</small></label>
+            <label class="iim-type-choice {{#unless showWeapon}}selected{{/unless}}"><input data-bind="itemType" type="radio" name="iim-type" value="item" {{#unless showWeapon}}checked{{/unless}} {{#if editMode}}disabled{{/if}}><i class="fas fa-briefcase"></i><strong>Equipamento</strong><small>Tipo Item — poderes sem ataque de arma</small></label>
+          </div>
+          {{#if editMode}}<small>O tipo não pode ser alterado ao editar um Item existente.</small>{{/if}}
+        </div>
+        <div class="iim-field"><label>Aparência, descrição e história</label><textarea data-bind="description" rows="6" placeholder="Quem criou, como funciona e por que é icônico...">{{data.description}}</textarea></div>
+        <div class="iim-field"><label>Imagem (opcional)</label><div class="iim-inline-input"><input data-bind="image" type="text" value="{{data.image}}" placeholder="icons/..."><button type="button" class="iim-btn secondary" data-iim-action="pick-image"><i class="fas fa-folder-open"></i> Procurar</button></div></div>
+        <div class="iim-rulebox"><b>Iconic ≠ Signature.</b> Um item icônico concede poderes ou efeitos especiais. Armas recebem automaticamente a propriedade especial Weapon, contabilizada no Power Value.</div>
+      </section>
+    {{/if}}
+    {{#if step2}}
+      <section class="iim-step">
+        <h2>2. Origem do item</h2>
+        <p class="iim-lead">Use uma Origin do compêndio oficial do Multiverse-D616. A origem do item é registrada, mas não altera automaticamente a origem de um personagem.</p>
+        <div class="iim-field"><label>Origin <b>*</b></label>
+          <select data-bind="originUuid"><option value="">— Selecione a origem —</option>{{#each origins}}<option value="{{uuid}}" {{#if selected}}selected{{/if}}>{{name}}</option>{{/each}}</select>
+        </div>
+        <div class="iim-origin-preview">
+          {{#if selectedOrigin}}<strong>{{selectedOrigin.name}}</strong><div>{{selectedOrigin.description}}</div>
+          {{else}}<span>Escolha uma origem para continuar.</span>{{/if}}
+        </div>
+        <div class="iim-rulebox">Conforme as regras do suplemento, a Origin concedida por um Iconic Item pode exigir aplicação de Extraordinary Origin no personagem. Esta etapa é uma referência para o Narrador.</div>
+      </section>
+    {{/if}}
+    {{#if step3}}
+      <section class="iim-step">
+        <h2>3. Restrições</h2>
+        <p class="iim-lead">Cada restrição reduz o Power Value em 1, respeitando o mínimo de 1. Por padrão, são até 3 restrições; apenas Obvious aceita várias da mesma categoria.</p>
+        <label class="iim-override"><input type="checkbox" data-bind="narratorOverride" {{#if data.narratorOverride}}checked{{/if}}><span><strong>Exceção do Narrador</strong><small>Permitir mais de 3 restrições neste item.</small></span></label>
+        <div class="iim-restriction-groups">
+          {{#each restrictionGroups}}
+          <section class="iim-restriction-group"><h3>{{label}} <span>({{original}})</span></h3><div class="iim-card-list">
+            {{#each items}}
+              <article class="iim-option-card {{#if selected}}selected{{/if}}">
+                <label><input type="checkbox" data-restriction-id="{{id}}" {{#if selected}}checked{{/if}}><span><strong>{{displayName}}</strong><small>{{displayDescription}}</small></span></label>
+                {{#if selected}}{{#if hasValue}}
+                  <div class="iim-restriction-input-wrap">
+                    {{#if hasParts}}
+                      <div class="iim-restriction-dual">
+                        <select aria-label="{{partLabel}}" title="{{partLabel}}" data-restriction-part-id="{{id}}" data-restriction-part="attribute">
+                          <option value="">{{partLabel}}...</option>
+                          {{#each partAttributes}}<option value="{{name}}" {{#if selected}}selected{{/if}}>{{name}}</option>{{/each}}
+                        </select>
+                        {{#if longThreshold}}
+                          <div class="iim-compact-dropdown">
+                            <button type="button" class="iim-threshold-trigger" data-iim-open-threshold="{{id}}" aria-haspopup="listbox" aria-expanded="false" title="Selecionar valor mínimo">{{selectedThreshold}} <i class="fas fa-chevron-down"></i></button>
+                            <div class="iim-threshold-list" role="listbox" aria-label="Valor mínimo" hidden>
+                              {{#each partThresholds}}<button type="button" role="option" class="iim-suggestion-item {{#if selected}}active{{/if}}" data-iim-threshold-choice="{{../id}}" data-iim-threshold-value="{{value}}">{{value}}</button>{{/each}}
+                            </div>
+                          </div>
+                        {{else}}
+                          <select aria-label="Valor mínimo" title="Valor mínimo" data-restriction-part-id="{{id}}" data-restriction-part="threshold">
+                            <option value="">Valor...</option>
+                            {{#each partThresholds}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>{{/each}}
+                          </select>
+                        {{/if}}
+                      </div>
+                    {{else if useSelect}}
+                      <select data-restriction-value="{{id}}">
+                        <option value="">— Selecione —</option>
+                        {{#each selectOptions}}<option value="{{this}}" {{#if (iimEq ../value this)}}selected{{/if}}>{{this}}</option>{{/each}}
+                      </select>
+                    {{else}}
+                      <input type="{{inputType}}" data-restriction-value="{{id}}" value="{{value}}" {{#if min}}min="{{min}}"{{/if}} {{#if max}}max="{{max}}"{{/if}} {{#if listId}}data-iim-autocomplete="{{id}}" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="{{listId}}"{{/if}} placeholder="{{placeholderPtBR}}" autocomplete="off">
+                      {{#if listId}}<div class="iim-suggestion-list" id="{{listId}}" role="listbox" aria-label="Sugestões para {{displayName}}" hidden></div>{{/if}}
+                    {{/if}}
+                  </div>
+                {{/if}}{{/if}}
+              </article>
+            {{/each}}
+          </div></section>
+          {{/each}}
+        </div>
+      </section>
+    {{/if}}
+    {{#if step4}}
+      <section class="iim-step iim-powers-step">
+        <h2>4. Poderes do item</h2>
+        <p class="iim-lead">Poderes regulares tornam-se cópias independentes na aba <b>Poderes</b> do equipamento. Poderes especiais ficam documentados e são aplicados manualmente, salvo automações explicitamente integradas.</p>
+        <div class="iim-tabs-grid">
+          <section class="iim-power-panel">
+            <div class="iim-panel-head"><div><h3>Poderes do Multiverse D616</h3><small>Compêndio + poderes do mundo. Versões numeradas substituem versões inferiores da mesma família.</small></div></div>
+            <div class="iim-filter-row"><input id="iim-power-search" type="search" value="{{searchQuery}}" placeholder="Buscar poder por nome, set ou requisito..."><select id="iim-powerset-filter"><option value="">Todos os conjuntos</option>{{#each powerSets}}<option value="{{this}}">{{this}}</option>{{/each}}</select></div>
+            <div class="iim-power-scroll" data-iim-scroll="regular">
+              {{#each regularPowers}}
+                <article class="iim-regular-power-row {{#if selected}}selected{{/if}}" data-search="{{searchText}}" data-powerset="{{powerSet}}" {{#unless isVisible}}hidden{{/unless}}>
+                  <label class="iim-power-pick-label">
+                    <input type="checkbox" data-power-uuid="{{uuid}}" {{#if selected}}checked{{/if}}>
+                    <span class="iim-power-main"><span class="iim-power-title"><strong>{{name}}</strong><button type="button" class="iim-info-btn" data-iim-info="regular" data-power-uuid="{{uuid}}" title="Ver descrição do poder" aria-label="Ver descrição do poder"><i class="fas fa-circle-info"></i></button></span><small>{{powerSet}}{{#if prerequisites}} · Pré-requisito: {{prerequisites}}{{/if}}</small></span>
+                  </label>
+                  <span class="iim-pick-badge">{{pickCost}} pick(s)</span>
+                </article>
+              {{/each}}
+            </div>
+          </section>
+          <section class="iim-power-panel">
+            <div class="iim-panel-head"><div><h3>Poderes especiais de Iconic Item</h3><small>Regras específicas do suplemento Avengers Expansion.</small></div></div>
+            {{#if showWeapon}}<div class="iim-rulebox"><b>Weapon</b> está incluído automaticamente (1 pick), porque o tipo selecionado é Arma.</div>{{/if}}
+            <div class="iim-power-scroll iim-special-scroll" data-iim-scroll="special">
+              {{#each specialPowers}}
+                <article class="iim-special-power-row {{#if selected}}selected{{/if}}"><label>
+                  <input type="checkbox" data-special-id="{{id}}" {{#if selected}}checked{{/if}}>
+                  <span class="iim-special-body"><strong>{{displayName}}</strong><small class="iim-effect"><b>Efeito:</b> {{displayEffect}}</small></span>
+                  <span class="iim-pick-badge">1 pick</span>
+                </label></article>
+              {{/each}}
+            </div>
+          </section>
+        </div>
+      </section>
+    {{/if}}
+    {{#if step5}}
+      <section class="iim-step iim-configuration-step">
+        <h2>5. Configuração do item</h2>
+        <p class="iim-lead">Defina as propriedades da arma, opções dos poderes especiais e a dependência Iconic Reliance. Essas configurações são independentes da seleção de poderes.</p>
+        {{#if showWeapon}}
+          <section class="iim-config-card iim-weapon-config"><div class="iim-config-title"><h3>Configuração de Arma</h3><span>Integrada ao ataque nativo do D616</span></div>
+            <div class="iim-form-grid three">
+              <label>Modo inicial<select data-bind="weaponDetails.primaryMode"><option value="mle" {{#if (iimEq data.weaponDetails.primaryMode "mle")}}selected{{/if}}>Melee</option><option value="agl" {{#if (iimEq data.weaponDetails.primaryMode "agl")}}selected{{/if}}>Agility</option></select></label>
+              <label>Tipo de dano<select data-bind="weaponDetails.damageType"><option value="health" {{#if (iimEq data.weaponDetails.damageType "health")}}selected{{/if}}>Health</option><option value="focus" {{#if (iimEq data.weaponDetails.damageType "focus")}}selected{{/if}}>Focus</option></select></label>
+            </div>
+            <div class="iim-form-grid four">
+              <label>Melee — Alcance<input data-bind="weaponDetails.meleeRange" type="text" value="{{data.weaponDetails.meleeRange}}"></label>
+              <label>Melee — Bônus DM<input data-bind="weaponDetails.meleeDamageMultiplierBonus" type="number" value="{{data.weaponDetails.meleeDamageMultiplierBonus}}"></label>
+              <label>Agility — Alcance<input data-bind="weaponDetails.agilityRange" type="text" value="{{data.weaponDetails.agilityRange}}"></label>
+              <label>Agility — Bônus DM<input data-bind="weaponDetails.agilityDamageMultiplierBonus" type="number" value="{{data.weaponDetails.agilityDamageMultiplierBonus}}"></label>
+            </div>
+          </section>
+        {{/if}}
+        {{#if showReducedFocus}}<section class="iim-config-card"><h3>Reduced Focus</h3><label>Poder afetado<select data-bind="specialConfig.reducedFocusTarget"><option value="">— Selecione —</option>{{#each selectedRegularPowers}}<option value="{{uuid}}" {{#if (iimEq ../data.specialConfig.reducedFocusTarget uuid)}}selected{{/if}}>{{name}}</option>{{/each}}</select></label></section>{{/if}}
+        {{#if showStackable}}<section class="iim-config-card"><h3>Stackable</h3><label>Poder numerado afetado<select data-bind="specialConfig.stackableTarget"><option value="">— Selecione —</option>{{#each numberedSelectedPowers}}<option value="{{uuid}}" {{#if (iimEq ../data.specialConfig.stackableTarget uuid)}}selected{{/if}}>{{name}}</option>{{/each}}</select></label></section>{{/if}}
+        {{#if showEffectOptions}}<section class="iim-config-card"><h3>Effect Options</h3><label>Efeitos disponíveis<input data-bind="specialConfig.effectOptions" type="text" value="{{data.specialConfig.effectOptions}}" placeholder="Ex.: Fire, Electricity, Cold"></label></section>{{/if}}
+        {{#if showDamageSwitch}}<section class="iim-config-card"><h3>Damage Switch</h3><label>Dano alternativo<select data-bind="specialConfig.damageSwitch"><option value="focus" {{#if (iimEq data.specialConfig.damageSwitch "focus")}}selected{{/if}}>Focus</option><option value="health" {{#if (iimEq data.specialConfig.damageSwitch "health")}}selected{{/if}}>Health</option></select></label></section>{{/if}}
+        {{#if showNegatite}}<section class="iim-config-card"><h3>Negatite</h3><label>Modo inicial<select data-bind="specialConfig.negatiteMode"><option value="penetration" {{#if (iimEq data.specialConfig.negatiteMode "penetration")}}selected{{/if}}>Ignorar 10 de proteção</option><option value="damage" {{#if (iimEq data.specialConfig.negatiteMode "damage")}}selected{{/if}}>+1 ao multiplicador Health</option></select></label></section>{{/if}}
+        <section class="iim-config-card"><h3>Iconic Reliance <small>(opcional)</small></h3><div class="iim-form-grid two">
+          <label>Dependência<select data-bind="reliance.type"><option value="none" {{#if (iimEq data.reliance.type "none")}}selected{{/if}}>Nenhuma</option><option value="tech" {{#if (iimEq data.reliance.type "tech")}}selected{{/if}}>Tech Reliance</option><option value="magic" {{#if (iimEq data.reliance.type "magic")}}selected{{/if}}>Magic Item Reliance</option></select></label>
+          <label>Poderes afetados<input type="text" data-bind="reliance.affected" value="{{data.reliance.affected}}" placeholder="Se vazio, definir com Narrador"></label>
+        </div></section>
+      </section>
+    {{/if}}
+    {{#if step6}}
+      <section class="iim-step">
+        <h2>6. Revisão e {{#if editMode}}atualização{{else}}criação{{/if}}</h2>
+        <p class="iim-lead">Confira os valores antes de salvar. Os poderes regulares ficarão associados à arma ou ao equipamento, sem duplicar poderes no Actor.</p>
+        {{#each validation.errors}}<div class="iim-alert error"><i class="fas fa-circle-xmark"></i><span>{{this}}</span></div>{{/each}}
+        {{#each validation.warnings}}<div class="iim-alert warning"><i class="fas fa-triangle-exclamation"></i><span>{{this}}</span></div>{{/each}}
+        <div class="iim-review-grid">
+          <section class="iim-review-card"><h3>{{data.name}}</h3><p><strong>Tipo:</strong> {{#if showWeapon}}Arma{{else}}Equipamento{{/if}}</p><p><strong>Origem:</strong> {{selectedOrigin.name}}</p><p>{{data.description}}</p></section>
+          <section class="iim-review-card iim-pv-review"><span>POWER VALUE</span><strong>{{powerValue}}</strong><small>{{powerPicks}} picks − {{restrictionCount}} restrições</small></section>
+        </div>
+        <section class="iim-review-card"><h3>Poderes regulares (associados ao Item)</h3>{{#if selectedRegularPowers.length}}<ul>{{#each selectedRegularPowers}}<li><strong>{{name}}</strong> — {{powerSet}} · {{pickCost}} pick(s)</li>{{/each}}</ul>{{else}}<p class="iim-muted">Nenhum.</p>{{/if}}</section>
+        <section class="iim-review-card"><h3>Propriedades especiais</h3>{{#if selectedSpecialPowers.length}}<ul>{{#each selectedSpecialPowers}}<li><b>{{displayName}}</b>{{#if detail}} — {{detail}}{{/if}}</li>{{/each}}</ul>{{else}}<p class="iim-muted">Nenhuma.</p>{{/if}}</section>
+        <section class="iim-review-card"><h3>Configuração</h3>
+          {{#if showWeapon}}<p><b>Arma:</b> {{data.weaponDetails.primaryMode}} · Dano {{data.weaponDetails.damageType}} · Melee {{data.weaponDetails.meleeRange}} / DM +{{data.weaponDetails.meleeDamageMultiplierBonus}} · Agility {{data.weaponDetails.agilityRange}} / DM +{{data.weaponDetails.agilityDamageMultiplierBonus}}</p>{{/if}}
+          <p><b>Iconic Reliance:</b> {{data.reliance.type}}{{#if data.reliance.affected}} — {{data.reliance.affected}}{{/if}}</p>
+        </section>
+        <section class="iim-review-card"><h3>Restrições</h3>{{#if selectedRestrictions.length}}<ul>{{#each selectedRestrictions}}<li><b>{{displayName}}</b>{{#if value}}: {{value}}{{/if}}</li>{{/each}}</ul>{{else}}<p class="iim-muted">Nenhuma.</p>{{/if}}</section>
+        <div class="iim-rulebox success">Poderes do compêndio serão copiados em <code>flags.multiverse-d616.attachedPowers</code>. Regras específicas do suplemento ficam em <code>flags.iconic-item-mancer</code>. A edição preserva as configurações dos poderes já associados.</div>
+      </section>
+    {{/if}}
+  </main>
+  <footer class="iim-footer"><button class="iim-btn ghost" type="button" data-iim-action="cancel"><i class="fas fa-xmark"></i> Cancelar</button>
+    <div class="iim-footer-right">
+      {{#unless step1}}<button class="iim-btn secondary" type="button" data-iim-action="previous"><i class="fas fa-arrow-left"></i> Anterior</button>{{/unless}}
+      {{#unless step6}}<button class="iim-btn primary" type="button" data-iim-action="next">Próximo <i class="fas fa-arrow-right"></i></button>{{/unless}}
+      {{#if step6}}<button class="iim-btn create" type="button" data-iim-action="save" {{#if validation.errors.length}}disabled title="Corrija os erros antes de salvar"{{/if}}><i class="fas fa-gem"></i> {{#if editMode}}Atualizar Iconic Item{{else}}Criar Iconic Item{{/if}}</button>{{/if}}
+    </div>
+  </footer>
+</div>
