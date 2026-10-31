@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111114">
+  <meta name="description" content="Crie armas e equipamentos icônicos para Marvel Multiverse RPG. Poderes, restrições, Power Value e exportação para o sistema Multiverse D616 no Foundry VTT.">
+  <title>Iconic Item Mancer — Multiverse D616</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles/mmc-base.css">
+  <link rel="stylesheet" href="./styles/mmc-skin.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="topbar">
+    <a class="brand" href="#mancer" aria-label="Iconic Item Mancer, início"><span class="brand-mark" aria-hidden="true">💎</span><div><h1>Multiverse D616 — Iconic Item Mancer</h1><div class="brand-subtitle">Crie seu item icônico e baixe o JSON para o Foundry VTT.</div></div></a>
+    <div class="header-meta"><span class="site-version">v1.0.1 • D616 v0.2.99</span><nav class="topnav" aria-label="Navegação principal"><a href="#mancer" data-view="mancer">O Mancer</a><a href="#colecao" data-view="colecao">Meus itens <span id="collection-count">0</span></a><a href="#guia" data-view="guia">Como usar</a><button type="button" data-action="new">Novo item</button></nav></div>
+  </header>
+  <main id="main" class="mmc-app" tabindex="-1"><div class="loading"><span class="loading-diamond"></span><p>Carregando o Iconic Item Mancer…</p></div></main>
+  <footer class="site-footer"><p>Dica: Esse criador de itens foi desenvolvido para ser utilizado no Foundry VTT e com o sistema Multiverse D616.</p><div><span>RodrigoSinistro · Web v1.0.1</span><a href="https://github.com/rodrigosinistro/iconic-item-mancer" target="_blank" rel="noopener noreferrer">Projeto no GitHub ↗</a></div></footer>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <input type="file" id="image-file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>Ative o JavaScript no navegador para criar seu Iconic Item.</noscript>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>

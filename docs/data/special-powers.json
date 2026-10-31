@@ -1,0 +1,292 @@
+[
+  {
+    "id": "adamantium",
+    "name": "Adamantium",
+    "namePtBR": "Adamantium",
+    "description": "Weapons ignore 1 level of Health Damage Reduction and the item cannot normally be destroyed. If the user lacks Healing Factor, the item must be unattached.",
+    "descriptionPtBR": "Armas ignoram 1 nível de Health Damage Reduction e o item normalmente não pode ser destruído. Se o usuário não tiver Healing Factor, o item deve ser Unattached.",
+    "warning": "adamantium",
+    "effectPtBR": "Armas de adamantium ignoram 1 nível de Redução de Dano de Health e normalmente não podem ser destruídas. Sem Healing Factor, o item precisa ser Unattached. Se o portador perder Healing Factor, faz um teste desafiador de Resilience ao fim de cada semana; falhando, perde 1 ponto de Resilience e morre se chegar a −4."
+  },
+  {
+    "id": "allspeak",
+    "name": "Allspeak",
+    "namePtBR": "Allspeak",
+    "description": "The wielder understands any spoken language and can be understood in return.",
+    "descriptionPtBR": "O portador entende qualquer língua falada e também pode ser compreendido pelos outros.",
+    "effectPtBR": "O usuário entende qualquer idioma falado e consegue se fazer entender, mesmo que esteja falando seu próprio idioma."
+  },
+  {
+    "id": "anti-metal",
+    "name": "Anti-Metal",
+    "namePtBR": "Anti-Metal",
+    "description": "Antarctic vibranium weapons ignore Health Damage Reduction from metal and cannot normally be destroyed.",
+    "descriptionPtBR": "Armas de vibranium antártico ignoram Health Damage Reduction proveniente de metal e normalmente não podem ser destruídas.",
+    "effectPtBR": "Armas feitas de vibranium antártico ignoram toda a Redução de Dano de Health proveniente de metal, inclusive a de escudos e armaduras de batalha. Normalmente não podem ser destruídas."
+  },
+  {
+    "id": "asgardian-transformation",
+    "name": "Asgardian Transformation",
+    "namePtBR": "Asgardian Transformation",
+    "description": "The item can switch the user between mortal and Asgardian forms; separation can end the granted powers and restore mortal form.",
+    "descriptionPtBR": "O item pode alternar o usuário entre forma mortal e Asgardiana; separação prolongada pode encerrar os poderes concedidos e restaurar a forma mortal.",
+    "effectPtBR": "Ao tocar o chão, o item transforma o usuário entre forma mortal e asgardiana. Ele também pode assumir aparência discreta adequada à forma mortal. A forma asgardiana concede todos os poderes do item; se um portador não asgardiano ficar separado dele por mais de 1 minuto, perde os poderes concedidos e retorna à forma mortal."
+  },
+  {
+    "id": "bandaging",
+    "name": "Bandaging",
+    "namePtBR": "Bandaging",
+    "description": "Instantly stops the wearer from bleeding.",
+    "descriptionPtBR": "Interrompe instantaneamente o sangramento do usuário.",
+    "effectPtBR": "Interrompe imediatamente o sangramento do usuário."
+  },
+  {
+    "id": "constructable",
+    "name": "Constructable",
+    "namePtBR": "Constructable",
+    "description": "The user constructs the item with their own powers and can regenerate it at will. It cannot be used by others or have an Unattached restriction.",
+    "descriptionPtBR": "O usuário constrói o item com seus próprios poderes e pode regenerá-lo à vontade. Ele não pode ser usado por outros nem possuir uma restrição Unattached.",
+    "forbidsUnattached": true,
+    "effectPtBR": "O usuário materializa o item com seus próprios poderes e pode recriá-lo quando quiser, sem gastar ações. Outras pessoas não podem usá-lo; ele não pode possuir restrições da categoria Unattached."
+  },
+  {
+    "id": "damage-switch",
+    "name": "Damage Switch",
+    "namePtBR": "Damage Switch",
+    "description": "The item can have its powers inflict Focus instead of Health damage, or the reverse. The choice is fixed when created.",
+    "descriptionPtBR": "Os poderes do item podem causar dano de Focus em vez de Health, ou o inverso. A escolha é definida na criação.",
+    "config": {
+      "type": "select",
+      "key": "damageSwitch",
+      "labelPtBR": "Tipo de dano alternativo",
+      "options": [
+        [
+          "health",
+          "Health"
+        ],
+        [
+          "focus",
+          "Focus"
+        ]
+      ]
+    },
+    "effectPtBR": "Quando fizer um ataque, o usuário decide se os poderes do item causam dano de Focus em vez de Health ou vice-versa. O tipo de dano deve ser declarado no momento do ataque."
+  },
+  {
+    "id": "darkforce-attack",
+    "name": "Darkforce Attack",
+    "namePtBR": "Darkforce Attack",
+    "description": "Each round the item can make a free Ego attack for Focus damage against a target it transported to the Darkforce Dimension.",
+    "descriptionPtBR": "A cada rodada, o item pode fazer um ataque gratuito de Ego que causa dano de Focus contra um alvo transportado por ele à Darkforce Dimension.",
+    "effectPtBR": "Em cada rodada, o item pode fazer gratuitamente um ataque de Ego que causa dano de Focus contra um alvo que ele próprio tenha transportado para a Dimensão Darkforce."
+  },
+  {
+    "id": "effect-options",
+    "name": "Effect Options",
+    "namePtBR": "Effect Options",
+    "description": "The item can switch among chosen elemental effects, with Focus/action costs depending on the number of options.",
+    "descriptionPtBR": "O item pode alternar entre efeitos elementais escolhidos, com custo de Focus/ação conforme a quantidade de opções.",
+    "config": {
+      "type": "text",
+      "key": "effectOptions",
+      "labelPtBR": "Opções de efeito",
+      "placeholderPtBR": "Ex.: Fire / Electricity"
+    },
+    "effectPtBR": "Permite escolher diferentes efeitos elementais para o item. Com exatamente 2 opções, alternar de uma para outra custa 5 Focus. Com mais de 2, a troca custa 5 Focus e 1 ação de qualquer tipo (movimento, padrão ou reação). A escolha deve ocorrer antes do ataque."
+  },
+  {
+    "id": "glider",
+    "name": "Glider",
+    "namePtBR": "Glider",
+    "description": "Grants a Glide Speed equal to twice Run Speed; by itself the item has Flight 1.",
+    "descriptionPtBR": "Concede Glide Speed igual ao dobro da Run Speed; sozinho, o item possui Flight 1.",
+    "effectPtBR": "O usuário ganha velocidade de Planar (Glide) igual a 2 vezes sua velocidade de Corrida (Run). Sem portador, o próprio item possui Flight 1."
+  },
+  {
+    "id": "godkiller",
+    "name": "Godkiller",
+    "namePtBR": "Godkiller",
+    "description": "Ignores Damage Reduction effects that come from Mythic origins.",
+    "descriptionPtBR": "Ignora efeitos de Damage Reduction provenientes de origens Mythic.",
+    "effectPtBR": "Os ataques com o item ignoram efeitos de Redução de Dano provenientes de origens Mythic."
+  },
+  {
+    "id": "mysterium",
+    "name": "Mysterium",
+    "namePtBR": "Mysterium",
+    "description": "A magic-disrupting material with strong anti-magic properties; Spider-Sense cannot detect it.",
+    "descriptionPtBR": "Material que perturba magia e possui fortes propriedades antimagia; Spider-Sense não consegue detectá-lo.",
+    "effectPtBR": "Material que interrompe magia. Ao tocar alguém que está usando ou recebendo efeitos mágicos, esses efeitos terminam imediatamente, inclusive proteções e Redução de Dano. Ataques baseados em magia falham automaticamente contra armadura ou escudo de mysterium. Spider-Sense não consegue detectar o material."
+  },
+  {
+    "id": "negatite",
+    "name": "Negatite",
+    "namePtBR": "Negatite",
+    "description": "A Dimension Z material. A weapon can either ignore 10 points of damage protection or gain +1 Health Damage Multiplier; switching modes costs an action and 5 Focus.",
+    "descriptionPtBR": "Material da Dimension Z. Uma arma pode ignorar 10 pontos de proteção de dano ou ganhar +1 Health Damage Multiplier; alternar os modos custa uma ação e 5 Focus.",
+    "config": {
+      "type": "select",
+      "key": "negatiteMode",
+      "labelPtBR": "Modo inicial",
+      "options": [
+        [
+          "penetration",
+          "Ignorar 10 de proteção"
+        ],
+        [
+          "damage",
+          "+1 Health Damage Multiplier"
+        ]
+      ]
+    },
+    "effectPtBR": "Armas de negatite podem escolher entre ignorar 10 pontos de proteção contra dano ou adicionar +1 ao Multiplicador de Dano de Health; esse bônus acumula com outros do mesmo tipo. Trocar de modo custa 5 Focus e 1 ação de qualquer tipo (movimento, padrão ou reação)."
+  },
+  {
+    "id": "nuform",
+    "name": "Nuform",
+    "namePtBR": "Nuform",
+    "description": "Synthetic vibranium that grants +1 Health Damage Multiplier and can transform into anti-metal if not periodically exposed to microwaves.",
+    "descriptionPtBR": "Vibranium sintético que concede +1 Health Damage Multiplier e pode se transformar em anti-metal se não receber exposição periódica a micro-ondas.",
+    "effectPtBR": "Armas feitas de Nuform recebem +1 no Multiplicador de Dano de Health, acumulável com bônus semelhantes. Se o material ficar uma semana sem exposição a micro-ondas, transforma-se em Anti-Metal."
+  },
+  {
+    "id": "psychic-link",
+    "name": "Psychic Link",
+    "namePtBR": "Psychic Link",
+    "description": "Lets the user contact and control the item telepathically, including remote actions and access to its senses.",
+    "descriptionPtBR": "Permite contatar e controlar o item telepaticamente, incluindo ações remotas e acesso aos sentidos do item.",
+    "effectPtBR": "O usuário pode contatar e controlar o item por telepatia. Se ele tiver sentidos próprios, o usuário pode percebê-los. Ao agir remotamente, o item entra na mesma iniciativa do usuário: este pode gastar sua ação de movimento, padrão ou ambas para conceder ações correspondentes ao item e pode usar sua reação para que ele reaja. O item só realiza 1 ação padrão por turno."
+  },
+  {
+    "id": "ranged",
+    "name": "Ranged",
+    "namePtBR": "Ranged",
+    "description": "Lets a normally Melee-checked power work at range using an Agility check instead.",
+    "descriptionPtBR": "Permite usar à distância um poder que normalmente exige teste de Melee, usando Agility no lugar.",
+    "effectPtBR": "Um poder que normalmente exige teste de Melee para atingir um alvo passa a poder ser utilizado à distância, substituindo o teste de Melee por um teste de Agility."
+  },
+  {
+    "id": "reduced-focus",
+    "name": "Reduced Focus",
+    "namePtBR": "Reduced Focus",
+    "description": "Reduces the Focus cost of one particular power by 5.",
+    "descriptionPtBR": "Reduz em 5 o custo de Focus de um poder específico.",
+    "config": {
+      "type": "power",
+      "key": "reducedFocusTarget",
+      "labelPtBR": "Poder afetado"
+    },
+    "effectPtBR": "Diminui em 5 pontos o custo de Focus de um poder específico do item."
+  },
+  {
+    "id": "returns-when-thrown",
+    "name": "Returns When Thrown",
+    "namePtBR": "Returns When Thrown",
+    "description": "If thrown and unrestrained, the item returns at the start of the user's next turn.",
+    "descriptionPtBR": "Se for arremessado e estiver livre, o item retorna no início do próximo turno do usuário.",
+    "effectPtBR": "Se for arremessado e não estiver retido ou impedido, o item volta ao usuário no começo do próximo turno dele."
+  },
+  {
+    "id": "reverbium",
+    "name": "Reverbium",
+    "namePtBR": "Reverbium",
+    "description": "Rare artificial vibranium that grants +1 Health Damage Multiplier and stacks with similar bonuses, but is less durable than vibranium.",
+    "descriptionPtBR": "Vibranium artificial raro que concede +1 Health Damage Multiplier e acumula com bônus semelhantes, mas é menos resistente que vibranium.",
+    "effectPtBR": "Armas desse vibranium artificial recebem +1 no Multiplicador de Dano de Health, acumulável com bônus semelhantes. O material é menos resistente do que o vibranium natural e pode ser destruído por um dispositivo projetado para isso."
+  },
+  {
+    "id": "sacrifice",
+    "name": "Sacrifice",
+    "namePtBR": "Sacrifice",
+    "description": "Any Focus costs required by the item's powers must be paid with Health instead.",
+    "descriptionPtBR": "Custos de Focus dos poderes do item devem ser pagos com Health no lugar.",
+    "effectPtBR": "Os custos de Focus exigidos para usar os poderes do item devem ser pagos com Health, na mesma quantidade."
+  },
+  {
+    "id": "salvation",
+    "name": "Salvation",
+    "namePtBR": "Salvation",
+    "description": "If the user is knocked unconscious, the item can automatically use its powers to get the user out of danger.",
+    "descriptionPtBR": "Se o usuário ficar inconsciente, o item pode usar seus poderes automaticamente para retirá-lo do perigo.",
+    "effectPtBR": "Quando o usuário fica inconsciente, o item pode agir automaticamente nos turnos seguintes para tentar afastá-lo do perigo, usando seus próprios poderes se puder."
+  },
+  {
+    "id": "stackable",
+    "name": "Stackable",
+    "namePtBR": "Stackable",
+    "description": "One numbered power from the item can stack +1 with the same power already possessed by the user, within the normal cap.",
+    "descriptionPtBR": "Um poder numerado do item pode acumular +1 com o mesmo poder já possuído pelo usuário, respeitando o limite normal.",
+    "config": {
+      "type": "power",
+      "key": "stackableTarget",
+      "labelPtBR": "Poder numerado afetado",
+      "numberedOnly": true
+    },
+    "effectPtBR": "Um dos poderes numerados do item pode aumentar em +1 o nível do mesmo poder já conhecido pelo usuário. Se ele não o tiver, recebe o nível 1. O resultado nunca excede o limite normal desse poder; quem já está no limite não ganha aumento."
+  },
+  {
+    "id": "summonable",
+    "name": "Summonable",
+    "namePtBR": "Summonable",
+    "description": "The item can be mentally summoned to the user; interdimensional summoning requires a standard action or reaction.",
+    "descriptionPtBR": "O item pode ser invocado mentalmente até o usuário; invocação entre dimensões exige ação standard ou reaction.",
+    "effectPtBR": "O usuário pode chamar mentalmente o item a qualquer distância, desde que estejam na mesma dimensão. Para trazê-lo de outra dimensão, precisa gastar uma ação padrão ou uma reação."
+  },
+  {
+    "id": "swingline",
+    "name": "Swingline",
+    "namePtBR": "Swingline",
+    "description": "Grants Swingline movement with speed three times Run Speed; its reach/range scales with that speed.",
+    "descriptionPtBR": "Concede movimento Swingline com velocidade três vezes a Run Speed; alcance/range acompanha essa velocidade.",
+    "effectPtBR": "O usuário ganha o modo de movimento Swingline com velocidade igual a 3 vezes sua Run Speed. O alcance da linha, e o alcance como arma à distância, é igual à sua velocidade Swingline."
+  },
+  {
+    "id": "toolkit",
+    "name": "Toolkit",
+    "namePtBR": "Toolkit",
+    "description": "Can hold one hacked gadget and grants an edge when hacking a gadget with the item.",
+    "descriptionPtBR": "Pode conter um gadget hackeado e concede Edge ao hackear um gadget usando o item.",
+    "effectPtBR": "O item pode conter um dispositivo hackeado por vez. Seu dono tem Edge ao realizar testes para hackear um dispositivo destinado a ser usado com o item."
+  },
+  {
+    "id": "unkillable",
+    "name": "Unkillable",
+    "namePtBR": "Unkillable",
+    "description": "As long as the item survives, the user cannot be permanently killed and can heal normally from otherwise fatal Health loss.",
+    "descriptionPtBR": "Enquanto o item existir, o usuário não pode ser morto permanentemente e pode se recuperar normalmente de perda de Health que seria fatal.",
+    "effectPtBR": "Enquanto o item existir, o usuário não pode ser morto permanentemente. Seu Health pode cair abaixo de zero sem limite inferior, mas ele se recupera normalmente apesar disso."
+  },
+  {
+    "id": "unmovable",
+    "name": "Unmovable",
+    "namePtBR": "Unmovable",
+    "description": "The item can only be moved by someone who is able to use it.",
+    "descriptionPtBR": "O item só pode ser movido por quem é capaz de usá-lo.",
+    "effectPtBR": "Somente pessoas que têm condições de usar o item conseguem movê-lo."
+  },
+  {
+    "id": "uru",
+    "name": "Uru",
+    "namePtBR": "Uru",
+    "description": "Uru weapons have unlimited range and are usually Mythic: Asgardian. Qualification restrictions can also make them impossible for unqualified users to lift.",
+    "descriptionPtBR": "Armas de Uru possuem alcance ilimitado e normalmente são Mythic: Asgardian. Restrições de qualificação também podem impedir usuários não qualificados de levantá-las.",
+    "effectPtBR": "Armas feitas de Uru têm alcance ilimitado e costumam ter origem Mythic: Asgardian. Caso haja uma condição de qualificação para empunhá-las (por exemplo, ser Worthy), uma pessoa que não cumpra essa condição não consegue erguer a arma."
+  },
+  {
+    "id": "vibranium",
+    "name": "Vibranium",
+    "namePtBR": "Vibranium",
+    "description": "Vibranium weapons gain +1 Health Damage Multiplier, stack with similar bonuses and cannot normally be destroyed.",
+    "descriptionPtBR": "Armas de vibranium ganham +1 Health Damage Multiplier, acumulam com bônus semelhantes e normalmente não podem ser destruídas.",
+    "effectPtBR": "Armas de vibranium ganham +1 no Multiplicador de Dano de Health; esse bônus acumula com outros semelhantes. Normalmente não podem ser destruídas por meios comuns."
+  },
+  {
+    "id": "weapon",
+    "name": "Weapon",
+    "namePtBR": "Weapon (Arma)",
+    "description": "The item functions as a weapon. Record range and Damage Multiplier for Melee and/or Agility attacks.",
+    "descriptionPtBR": "O item funciona como arma. Registre alcance e Damage Multiplier para ataques de Melee e/ou Agility.",
+    "weapon": true,
+    "effectPtBR": "O item funciona como arma. Sua ficha registra o Multiplicador de Dano e o alcance; podem existir valores distintos para ataques de Melee e de Agility."
+  }
+]

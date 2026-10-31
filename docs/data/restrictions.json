@@ -1,0 +1,371 @@
+[
+  {
+    "id": "access-min-ability",
+    "category": "access",
+    "name": "Minimum Ability Score Required",
+    "namePtBR": "Habilidade mínima necessária",
+    "description": "Requires a minimum score in a specific ability (2 or more).",
+    "descriptionPtBR": "Exige valor mínimo 2+ em uma Habilidade específica.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Melee 4"
+  },
+  {
+    "id": "access-min-damage",
+    "category": "access",
+    "name": "Minimum Damage Multiplier Required",
+    "namePtBR": "Multiplicador de Dano mínimo necessário",
+    "description": "Requires a minimum damage multiplier (2 or more).",
+    "descriptionPtBR": "Exige Multiplicador de Dano mínimo 2+.",
+    "hasValue": true,
+    "valueType": "number",
+    "min": 2,
+    "max": 6
+  },
+  {
+    "id": "access-min-defense",
+    "category": "access",
+    "name": "Minimum Defense Score Required",
+    "namePtBR": "Defesa mínima necessária",
+    "description": "Requires a minimum defense score (2 or more).",
+    "descriptionPtBR": "Exige valor mínimo 2+ em uma Defesa específica.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Ego Defense 15"
+  },
+  {
+    "id": "access-min-check",
+    "category": "access",
+    "name": "Minimum Non-Combat Check Bonus Required",
+    "namePtBR": "Bônus mínimo em teste não-combate",
+    "description": "Requires a minimum non-combat check bonus (2 or more).",
+    "descriptionPtBR": "Exige bônus mínimo 2+ em um teste não-combate.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Logic non-combat +3"
+  },
+  {
+    "id": "access-min-rank",
+    "category": "access",
+    "name": "Minimum Rank Required",
+    "namePtBR": "Rank mínimo necessário",
+    "description": "Requires a minimum character rank (2 or more).",
+    "descriptionPtBR": "Exige Rank mínimo 2+.",
+    "hasValue": true,
+    "valueType": "number",
+    "min": 2,
+    "max": 6
+  },
+  {
+    "id": "access-movement",
+    "category": "access",
+    "name": "Movement Mode Required",
+    "namePtBR": "Modo de movimento necessário",
+    "description": "Requires a movement mode other than run, climb or swim.",
+    "descriptionPtBR": "Exige um modo de movimento além de correr, escalar ou nadar.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Flight"
+  },
+  {
+    "id": "access-origin",
+    "category": "access",
+    "name": "Origin Required",
+    "namePtBR": "Origem necessária",
+    "description": "Requires a specific origin.",
+    "descriptionPtBR": "Exige uma Origem específica.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Mutant"
+  },
+  {
+    "id": "access-power",
+    "category": "access",
+    "name": "Power Required",
+    "namePtBR": "Poder necessário",
+    "description": "Requires a specific power.",
+    "descriptionPtBR": "Exige um Poder específico.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Healing Factor"
+  },
+  {
+    "id": "access-size",
+    "category": "access",
+    "name": "Size Required",
+    "namePtBR": "Tamanho necessário",
+    "description": "Requires a specific size.",
+    "descriptionPtBR": "Exige um Tamanho específico.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Big"
+  },
+  {
+    "id": "access-species",
+    "category": "access",
+    "name": "Species Required",
+    "namePtBR": "Espécie necessária",
+    "description": "Requires a specific species.",
+    "descriptionPtBR": "Exige uma Espécie específica.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-tag",
+    "category": "access",
+    "name": "Tag Required",
+    "namePtBR": "Tag necessária",
+    "description": "Requires a specific tag.",
+    "descriptionPtBR": "Exige uma Tag específica.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Worthy"
+  },
+  {
+    "id": "access-team",
+    "category": "access",
+    "name": "Team Membership Required",
+    "namePtBR": "Membro de equipe necessário",
+    "description": "Requires membership in a specific team.",
+    "descriptionPtBR": "Exige pertencer a uma equipe específica.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Avengers"
+  },
+  {
+    "id": "access-trait",
+    "category": "access",
+    "name": "Trait Required",
+    "namePtBR": "Trait necessário",
+    "description": "Requires a specific trait.",
+    "descriptionPtBR": "Exige um Trait específico.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "access-custom",
+    "category": "access",
+    "name": "Custom Access Restriction",
+    "namePtBR": "Acesso personalizado (Narrador)",
+    "description": "A Narrator-approved access restriction.",
+    "descriptionPtBR": "Restrição de acesso personalizada aprovada pelo Narrador.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "challenging-anathema",
+    "category": "challenging",
+    "name": "Anathema",
+    "namePtBR": "Anathema",
+    "description": "The item burdens the user with the Anathema trait.",
+    "descriptionPtBR": "O item impõe ao usuário o Trait Anathema."
+  },
+  {
+    "id": "challenging-berserker",
+    "category": "challenging",
+    "name": "Berserker",
+    "namePtBR": "Berserker",
+    "description": "The item burdens the user with the Berserker trait.",
+    "descriptionPtBR": "O item impõe ao usuário o Trait Berserker."
+  },
+  {
+    "id": "challenging-bloodthirsty",
+    "category": "challenging",
+    "name": "Bloodthirsty",
+    "namePtBR": "Bloodthirsty",
+    "description": "The item burdens the user with the Bloodthirsty trait.",
+    "descriptionPtBR": "O item impõe ao usuário o Trait Bloodthirsty."
+  },
+  {
+    "id": "challenging-breathe-different",
+    "category": "challenging",
+    "name": "Breathe Different",
+    "namePtBR": "Breathe Different",
+    "description": "The item burdens the user with the Breathe Different trait.",
+    "descriptionPtBR": "O item impõe ao usuário o Trait Breathe Different."
+  },
+  {
+    "id": "challenging-weakness",
+    "category": "challenging",
+    "name": "Weakness",
+    "namePtBR": "Weakness",
+    "description": "The item gives the user a weakness.",
+    "descriptionPtBR": "O item impõe uma Weakness ao usuário.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Descreva a fraqueza"
+  },
+  {
+    "id": "challenging-custom",
+    "category": "challenging",
+    "name": "Custom Challenging Restriction",
+    "namePtBR": "Desafio personalizado (Narrador)",
+    "description": "A Narrator-approved challenging restriction.",
+    "descriptionPtBR": "Restrição desafiadora personalizada aprovada pelo Narrador.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "obvious-awkward",
+    "category": "obvious",
+    "name": "Awkward",
+    "namePtBR": "Awkward",
+    "description": "Makes handling things or people troublesome.",
+    "descriptionPtBR": "Causa Trouble ao manipular objetos ou pessoas que o usuário não deseja ferir."
+  },
+  {
+    "id": "obvious-flashy",
+    "category": "obvious",
+    "name": "Flashy",
+    "namePtBR": "Flashy",
+    "description": "Makes sneaking or hiding troublesome.",
+    "descriptionPtBR": "Causa Trouble ao se esconder ou agir furtivamente."
+  },
+  {
+    "id": "obvious-large",
+    "category": "obvious",
+    "name": "Large",
+    "namePtBR": "Large",
+    "description": "Hard to take into many places; troublesome in tight spaces.",
+    "descriptionPtBR": "É difícil de levar a muitos lugares e pode causar Trouble em espaços apertados."
+  },
+  {
+    "id": "obvious-loud",
+    "category": "obvious",
+    "name": "Loud",
+    "namePtBR": "Loud",
+    "description": "Makes sneaking or hiding troublesome.",
+    "descriptionPtBR": "Causa Trouble ao se esconder ou agir furtivamente."
+  },
+  {
+    "id": "obvious-menacing",
+    "category": "obvious",
+    "name": "Menacing",
+    "namePtBR": "Menacing",
+    "description": "Makes positive Ego interactions with strangers troublesome.",
+    "descriptionPtBR": "Causa Trouble em testes de Ego para obter reações positivas de estranhos."
+  },
+  {
+    "id": "obvious-custom",
+    "category": "obvious",
+    "name": "Custom Obvious Restriction",
+    "namePtBR": "Óbvia personalizada (Narrador)",
+    "description": "A Narrator-approved obvious restriction.",
+    "descriptionPtBR": "Restrição óbvia personalizada aprovada pelo Narrador.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "unattached-carried",
+    "category": "unattached",
+    "name": "Carried",
+    "namePtBR": "Carried — carregado (como arma)",
+    "description": "The item is carried and can be taken, dropped or lost.",
+    "descriptionPtBR": "O item é carregado e pode ser tomado, derrubado ou perdido."
+  },
+  {
+    "id": "unattached-driven",
+    "category": "unattached",
+    "name": "Driven",
+    "namePtBR": "Driven — conduzido (como veículo)",
+    "description": "The item must be driven and can be separated from its user.",
+    "descriptionPtBR": "O item precisa ser conduzido e pode ser separado do usuário."
+  },
+  {
+    "id": "unattached-worn",
+    "category": "unattached",
+    "name": "Worn",
+    "namePtBR": "Worn — vestido (como armadura)",
+    "description": "The item must be worn and can be removed.",
+    "descriptionPtBR": "O item precisa ser vestido e pode ser removido."
+  },
+  {
+    "id": "unattached-custom",
+    "category": "unattached",
+    "name": "Custom Unattached Restriction",
+    "namePtBR": "Desanexada personalizada (Narrador)",
+    "description": "A Narrator-approved unattached restriction.",
+    "descriptionPtBR": "Restrição desanexada personalizada aprovada pelo Narrador.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "use-home-universe",
+    "category": "use",
+    "name": "Home Universe Use Only",
+    "namePtBR": "Somente no universo de origem",
+    "description": "Only works in its home universe.",
+    "descriptionPtBR": "Funciona somente em seu universo de origem."
+  },
+  {
+    "id": "use-once-hour",
+    "category": "use",
+    "name": "Only Works Once Per Hour",
+    "namePtBR": "Somente uma vez por hora",
+    "description": "Can only work once per hour.",
+    "descriptionPtBR": "Pode funcionar somente uma vez por hora."
+  },
+  {
+    "id": "use-three-day",
+    "category": "use",
+    "name": "Only Works Three Times Per Day",
+    "namePtBR": "Somente três vezes por dia",
+    "description": "Can only work three times per day.",
+    "descriptionPtBR": "Pode funcionar somente três vezes por dia."
+  },
+  {
+    "id": "use-unliving",
+    "category": "use",
+    "name": "Only Works on Unliving Targets",
+    "namePtBR": "Somente contra alvos não-vivos",
+    "description": "Only works on unliving targets.",
+    "descriptionPtBR": "Funciona somente contra alvos não-vivos."
+  },
+  {
+    "id": "use-dimensions",
+    "category": "use",
+    "name": "Only Works In/With Certain Dimensions",
+    "namePtBR": "Somente em/com certas dimensões",
+    "description": "Only works in or with certain dimensions.",
+    "descriptionPtBR": "Funciona somente em ou com dimensões específicas.",
+    "hasValue": true,
+    "valueType": "text"
+  },
+  {
+    "id": "use-extradimensional",
+    "category": "use",
+    "name": "Only Works Against Extradimensional Creatures",
+    "namePtBR": "Somente contra criaturas extradimensionais",
+    "description": "Only works against extradimensional creatures.",
+    "descriptionPtBR": "Funciona somente contra criaturas extradimensionais."
+  },
+  {
+    "id": "use-challenging-check",
+    "category": "use",
+    "name": "Requires a Challenging Ability Check",
+    "namePtBR": "Exige teste de Habilidade Challenging",
+    "description": "Requires a Challenging ability check to activate or use.",
+    "descriptionPtBR": "Exige um teste Challenging de Habilidade para ativar ou usar.",
+    "hasValue": true,
+    "valueType": "text",
+    "placeholderPtBR": "Ex.: Ego"
+  },
+  {
+    "id": "use-no-damage",
+    "category": "use",
+    "name": "Does No Actual Damage",
+    "namePtBR": "Não causa dano real",
+    "description": "The item does no actual damage.",
+    "descriptionPtBR": "O item não causa dano real."
+  },
+  {
+    "id": "use-custom",
+    "category": "use",
+    "name": "Custom Use Restriction",
+    "namePtBR": "Uso personalizado (Narrador)",
+    "description": "A Narrator-approved use restriction.",
+    "descriptionPtBR": "Restrição de uso personalizada aprovada pelo Narrador.",
+    "hasValue": true,
+    "valueType": "text"
+  }
+]

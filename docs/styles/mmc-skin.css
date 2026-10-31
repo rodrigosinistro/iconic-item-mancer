@@ -1,0 +1,159 @@
+/* MMC Skin — Iconic Style Adaptation (non-invasive, purely visual)
+   This stylesheet maps Iconic Item Mancer's visual language to MMC classes.
+   Scope: .mmc-app only (avoids global bleed).*/
+
+/* App background & typography */
+.mmc-app {
+  /* keep font from Foundry, but tune smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #e0e0e0;
+}
+
+.mmc-app .window-content {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 16px;
+}
+
+/* Cards & surface */
+.mmc-app .mmc-card,
+.mmc-app .mmc-subcard,
+.mmc-app .mmc-selected-panel,
+.mmc-app .mmc-grid > .mmc-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  padding: 16px;
+}
+
+/* Grid spacing */
+.mmc-app .mmc-grid {
+  display: grid;
+  grid-gap: 16px;
+}
+
+/* Headings */
+.mmc-app h1, .mmc-app h2, .mmc-app h3, .mmc-app h4 {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+.mmc-app h2 {
+  border-bottom: 2px solid #2196f3;
+  padding-bottom: 8px;
+}
+
+/* Stepper (map Iconic progress indicator → MMC .mmc-steps/.mmc-step) */
+.mmc-app .mmc-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.mmc-app .mmc-step {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+.mmc-app .mmc-step.active {
+  background: linear-gradient(120deg, #2196f3, #6ec6ff);
+  color: #0b1020;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+  transform: translateY(-1px);
+}
+
+/* Body sections */
+.mmc-app .mmc-body {
+  background: transparent;
+}
+
+/* Buttons */
+.mmc-app .mmc-btn,
+.mmc-app button {
+  background: linear-gradient(160deg, #2b2b44, #1f1f36);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #e8ecff;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+.mmc-app .mmc-btn:hover,
+.mmc-app button:hover {
+  transform: translateY(-1px);
+  border-color: #8bc2ff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+}
+.mmc-app .mmc-btn:disabled,
+.mmc-app button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Inputs & form controls */
+.mmc-app input[type="text"],
+.mmc-app input[type="number"],
+.mmc-app input[type="search"],
+.mmc-app select,
+.mmc-app textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #e6eeff;
+  padding: 6px 8px;
+  outline: none;
+  transition: border-color .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.mmc-app input:focus,
+.mmc-app select:focus,
+.mmc-app textarea:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.25);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* Tags & chips */
+.mmc-app .mmc-tag, .mmc-app .mmc-chip, .mmc-app .mmc-chip-x {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+.mmc-app .mmc-tag-granted {
+  background: linear-gradient(120deg, rgba(33, 150, 243, 0.22), rgba(140, 198, 255, 0.22));
+  border-color: rgba(140, 198, 255, 0.45);
+}
+
+/* Tables & lists */
+.mmc-app table {
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mmc-app table th {
+  background: rgba(255,255,255,0.06);
+}
+.mmc-app table td, .mmc-app table th {
+  border-color: rgba(255,255,255,0.12);
+}
+
+/* Subtle separators */
+.mmc-app hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  margin: 12px 0;
+}
+
+/* Minor helpers */
+.mmc-app .mmc-warn { color: #ffb74d; }
+.mmc-app .mmc-small { opacity: 0.85; font-size: 12px; }
+

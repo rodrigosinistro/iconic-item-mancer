@@ -1,0 +1,35 @@
+{
+  "siteVersion": "1.0.1",
+  "moduleVersion": "2.0.8",
+  "systemVersion": "0.2.99",
+  "retrievedOn": "2026-10-29",
+  "sources": {
+    "powers": {
+      "repository": "rodrigosinistro/multiverse-D616",
+      "path": "apps/charactermancer/data/powers.json",
+      "blobSha": "77ee92c4defd517d5af11d2cac71ed5a58736b9b"
+    },
+    "origins": {
+      "repository": "rodrigosinistro/multiverse-D616",
+      "path": "apps/charactermancer/data/origins.json",
+      "blobSha": "6fefd2dd4c1fe36003a8157538a4a60a16f697b9"
+    },
+    "restrictions": "iconic-item-mancer-v2.0.8(1).zip/data/restrictions.json",
+    "specials": "iconic-item-mancer-v2.0.8(1).zip/data/special-powers.json"
+  },
+  "counts": {
+    "powers": 398,
+    "origins": 40,
+    "restrictions": 39,
+    "specials": 30
+  },
+  "theme": {
+    "repository": "rodrigosinistro/multiverse-d616-charactermancer-site",
+    "referenceVersion": "0.0.21",
+    "commit": "5546f5f5c6127983a8776f6e8e201c8f7f427953",
+    "stylesheets": [
+      "styles/styles.css",
+      "styles/skin-iconic.css"
+    ]
+  }
+}
