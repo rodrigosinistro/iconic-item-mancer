@@ -28,7 +28,7 @@ O módulo permite criar **armas** e **equipamentos** icônicos com poderes assoc
 | Sistema de RPG | `multiverse-d616` v0.2.99 ou superior |
 | Módulo | Iconic Item Mancer v2.0.8 |
 
-Este repositório contém o módulo Foundry e a versão web do Iconic Item Mancer, na pasta `docs/`. O sistema Multiverse D616 não é alterado nem incluído no pacote do módulo.
+Este repositório contém **somente o módulo**. O sistema Multiverse D616 não é alterado nem incluído neste pacote.
 
 ## Instalação
 
